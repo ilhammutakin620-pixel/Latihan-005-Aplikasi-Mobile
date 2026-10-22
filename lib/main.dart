@@ -14,9 +14,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.indigo,
+          seedColor: const Color(0xFF001F3F), // Biru Navy
         ),
         useMaterial3: true,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF001F3F), // Warna Biru Navy di AppBar
+          foregroundColor: Colors.white,      // Warna teks putih agar kontras
+        ),
       ),
       home: Scaffold(
         appBar: AppBar(
