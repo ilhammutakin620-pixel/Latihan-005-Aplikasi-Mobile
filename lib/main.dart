@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Aplikasi Mahasiswa'),
+          title: const Text('Dashboard Mahasiswa'),
         ),
         body: const Center(
           child: Text(
