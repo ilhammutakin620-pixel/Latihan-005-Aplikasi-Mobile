@@ -22,6 +22,14 @@ class MyApp extends StatelessWidget {
           foregroundColor: Colors.white,      // Warna teks putih agar kontras
         ),
       ),
+      darkTheme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF001F3F),
+          brightness: Brightness.dark,
+        ),
+        useMaterial3: true,
+      ),
+      themeMode: ThemeMode.dark,
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Dashboard Mahasiswa'),
