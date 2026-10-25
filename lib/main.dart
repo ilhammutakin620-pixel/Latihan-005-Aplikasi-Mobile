@@ -30,15 +30,46 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       themeMode: ThemeMode.dark,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Dashboard Mahasiswa'),
-        ),
-        body: const Center(
-          child: Text(
-            'Muhammad Ilham Muttaqim!',
-            style: TextStyle(fontSize: 20),
-          ),
+      home: const ProfilePage(),
+    );
+  }
+}
+
+// Latihan 5: Class ProfilePage sebagai halaman profil yang dibuka melalui home
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Dashboard Mahasiswa'),
+      ),
+      body: const Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              radius: 50,
+              child: Icon(Icons.person, size: 50),
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Muhammad Ilham Muttaqim!',
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 8),
+            Text(
+              'Profil Mahasiswa',
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.grey,
+              ),
+            ),
+          ],
         ),
       ),
     );
